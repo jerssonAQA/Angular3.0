@@ -1,2 +1,2 @@
 # Angular3.0
-Aprendizaje continuo con Angulr
+Aprendizaje continuo con Angular
