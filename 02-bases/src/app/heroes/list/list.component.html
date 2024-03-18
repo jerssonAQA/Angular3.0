@@ -1,2 +1,30 @@
 <p>Creación de component con comando ng g c heroes\list,
   Creando component.html, css, spec.ts y ts.</p>
+
+<h3>Listado de Héroes</h3>
+
+<div *ngIf="deletedHero; else nothingWasDeleted">
+  <h3>Héroe borrado <small class="text-danger">{{deletedHero}}</small></h3>
+
+</div>
+<ng-template #nothingWasDeleted>
+  <h3>No ha borrado nada.</h3>
+
+</ng-template>
+
+
+<button
+*ngIf="heroNames.length >0"
+(click)="removeLastHero()" class="btn btn-outline-danger">
+  Borrar ultimo héroe
+</button>
+
+
+  <ul Class="mt-2 list-group">
+    <!-- <li class="list-group-item">Spiderman</li>
+    <li class="list-group-item">Iroman</li>
+    <li class="list-group-item">Hulk</li>
+    <li class="list-group-item">Thor</li>
+     Reemplazar la lista de item por un ngFor-->
+     <li *ngFor="let name of heroNames" class="list-group-item">{{name}}</li>
+  </ul>

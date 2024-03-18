@@ -23,6 +23,6 @@ class="btn btn-primary mx-2" >
 Cambiar Nombre
 </button>
 
-<button *ngIf="age !== 22" class="btn btn-primary mx-2"(click)="changeAge()">Cambiar Edad</button>
+<button *ngIf="age!== 22" (click)="changeAge()"class="btn btn-primary mx-2">Cambiar Edad</button>
 
 <button class="btn btn-primary mx-2"(click)="resetForm()">Reset Formulario</button>
